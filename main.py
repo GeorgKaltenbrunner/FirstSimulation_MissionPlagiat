@@ -49,5 +49,5 @@ machine = simpy.Resource(env, NO_OF_MACHINES)
 env.process(generate_order(env, machine))
 env.run(until=400)
 
-print("\n\nAverage wait time in order queue: %.1f seconds." % (numpy.mean(order_wait_time)))
-print("Average time until order is serviced: %.1f seconds." % (numpy.mean(order_time)))
+print("\n\nAverage wait time for orders: %.1f seconds." % (numpy.mean(order_wait_time)))
+print("Average time until order is finished: %.1f seconds." % (numpy.mean(order_time)))
