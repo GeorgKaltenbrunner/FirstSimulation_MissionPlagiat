@@ -13,13 +13,8 @@ order_time = []
 
 # List of Products and their productions time
 products = {"A": 20, "B": 30, "C": 15, "D": 40}
-products_keys = products.keys()
-keys_list = list(products_keys)
 times = products.values()
 times_list = list(times)
-
-"""for key in products:
-    print(key)"""
 
 
 def generate_order(env, machine):
@@ -37,9 +32,8 @@ def order(env, order_id, machine):
         order_wait_time.append(env.now - start_production)
         product_item = random.randint(0, 3)  # Hier kann noch schöner abgekürzt werden
         time_to_produce = times_list[product_item]
-        product_name = keys_list[product_item]
         yield env.timeout(time_to_produce)
-        print("#### Order %s finished in %.1f second" % (order_id, env.now - start_production))
+        print("#### Order %s finished in %.1f seconds" % (order_id, env.now - start_production))
         order_time.append(env.now - start_production)
 
 
