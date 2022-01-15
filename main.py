@@ -14,13 +14,17 @@ order_time = []
 # List of Products and their productions time
 products = {"A": 20, "B": 30, "C": 15, "D": 40}
 
+print(len(products))
+
 # Save production times in list to have easier access for later procesing
 times = products.values()
 times_list = list(times)
 
+
 # Gnerate the orders
 def generate_order(env, machine):
     for i in range(NO_OF_ORDERS):
+        # The generation of the order can take between 1 until 20
         yield env.timeout(random.randint(1, 20))
         env.process(order(env, i, machine))
 
@@ -32,11 +36,13 @@ def order(env, order_id, machine):
         start_production = env.now
         yield req
         order_wait_time.append(env.now - start_production)
-        product_item = random.randint(0, 3)  # Hier kann noch schöner abgekürzt werden
+        product_item = random.randint(0, len(products) - 1)
         time_to_produce = times_list[product_item]
         yield env.timeout(time_to_produce)
-        print("#### Order %s finished in %.1f seconds. Order was finished at time %.1f" % (order_id, env.now - start_production, env.now))
+        print("#### Order %s finished in %.1f seconds. Order was finished at time %.1f" % (
+        order_id, env.now - start_production, env.now))
         order_time.append(env.now - start_production)
+
 
 # Setup Environment
 env = simpy.Environment()
