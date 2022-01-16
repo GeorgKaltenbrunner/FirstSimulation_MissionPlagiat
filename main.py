@@ -5,7 +5,7 @@ import numpy
 
 # Initialize variables
 NO_OF_ORDERS = 20
-NO_OF_MACHINES = 2
+NO_OF_MACHINES = 5
 
 # Initialize lists for calculating average wait time for orders
 order_wait_time = []
@@ -14,7 +14,6 @@ order_time = []
 # List of Products and their productions time
 products = {"A": 20, "B": 30, "C": 15, "D": 40}
 
-print(len(products))
 
 # Save production times in list to have easier access for later procesing
 times = products.values()
