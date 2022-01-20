@@ -2,12 +2,13 @@
 
 Generelle Frage: Was mag ich herausfinden?
 - Optimale Maschinenbelegung?
-- Optimale Produktionsreihenfolge?
+- Optimale Produktionsreihenfolge? -> das
 
-### 1. Aufträge werden generiert
-
-### 2. Maschine bearbeitet die Aufträge
-
-### 3. Nach Bearbeitung werden Aufträge im Lager gelagert
-
-### 4. Löschung
+#### To Do's
+- Due Date hinzufügen
+- Zu den Orders bestimmte Maschinen hinzufügen
+- Maschinen habe max. Kapazität
+- Liste von Orders,
+  - die erstellt wurden
+  - die produziert wurden und jetzt gelagert
+  - die die Due Date gerissen haben

@@ -4,8 +4,8 @@ import random
 import numpy
 
 # Initialize variables
-NO_OF_ORDERS = 20
-NO_OF_MACHINES = 5
+NO_OF_ORDERS = 200
+NO_OF_MACHINES = 3
 
 # Initialize lists for calculating average wait time for orders
 order_wait_time = []
