@@ -7,6 +7,11 @@ import numpy
 NO_OF_ORDERS = 200
 NO_OF_MACHINES = 3
 
+# Initialize lists for further information
+orders_created = []
+orders_produced = []
+order_over_due_date = []
+
 # Initialize lists for calculating average wait time for orders
 order_wait_time = []
 order_time = []
