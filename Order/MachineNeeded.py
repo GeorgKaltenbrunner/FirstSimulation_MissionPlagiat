@@ -8,7 +8,8 @@ def machine_needed(max_number_machines, capa_start, capa_end):
 
     for i in range(number_machines):
         machine = random.randint(1, max_number_machines)
-        list_machines[machine] = Capacity.get_capacity(capa_start, capa_end)
+        if i not in list_machines:
+            list_machines[machine] = Capacity.get_capacity(capa_start, capa_end)
 
     return list_machines
 
