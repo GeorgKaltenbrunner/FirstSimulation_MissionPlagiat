@@ -17,4 +17,5 @@ def machine_needed(max_number_machines):
                 list_machines.append(machine)
         return list_machines
 
+
 print(machine_needed(3))
